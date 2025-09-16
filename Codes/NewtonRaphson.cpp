@@ -28,4 +28,10 @@ void newtonRaphson(const vector<double>& coeffs, double x0, double tolerance, in
     int iteration = 0;
     bool converged = false;
 
-   
+    cout << "\nIteration Table:\n";
+    cout << "-----------------------------------------------------------------------------------------\n";
+    cout << "Iter |       x0       |       f(x0)     |      f'(x0)     |       x1       | Relative Error\n";
+    cout << "-----------------------------------------------------------------------------------------\n";
+
+ 
+
