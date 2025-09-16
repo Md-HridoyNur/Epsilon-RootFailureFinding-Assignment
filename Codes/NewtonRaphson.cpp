@@ -22,5 +22,77 @@ double df(const vector<double>& coeffs, double x) {
     return result;
 }
 
-ety
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+int main() {
+    int degree;
+    cout << "=== NEWTON RAPHSON METHOD (General Polynomial) ===\n\n";
+    
+    cout << "Enter degree of polynomial: ";
+    cin >> degree;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
