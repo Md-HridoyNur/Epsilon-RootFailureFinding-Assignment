@@ -91,6 +91,9 @@ vector<double> coeffs(degree + 1);
 doible x0, tolerance;
 int maxIterations;
 
-
+cout << "\nEnter initial guess (x0): ";
+cin >> x0;
+cout << "Enter tolerance (e.g., 0.0001): ";
+cin >> tolerance;
 
 
