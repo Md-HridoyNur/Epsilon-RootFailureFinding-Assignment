@@ -1,5 +1,4 @@
 #include <iostream> 
-int main(){
-    printf("Hello, World!\n");
-    return 0;
-}
+#include<cmath>
+using namespace std;
+double f(double x)
