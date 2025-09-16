@@ -62,7 +62,7 @@ void newtonRaphson(const vector<double>& coeffs, double x0, double tolerance, in
             converged = true;
             break;
         }
-        x0 = x2;
+        x0 = x1;
         iteration++;
     } while (iteration < maxIterations);
     cout << "-----------------------------------------------------------------------------------------\n";
