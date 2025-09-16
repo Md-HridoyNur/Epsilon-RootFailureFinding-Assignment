@@ -73,7 +73,6 @@ void newtonRaphson(const vector<double>& coeffs, double x0, double tolerance, in
         cout << "Method did not converge within the maximum number of iterations.\n";
 
         
-=======
 
 
 
