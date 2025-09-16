@@ -58,5 +58,18 @@ void newtonRaphson(const vector<double>& coeffs, double x0, double tolerance, in
              << setw(13) << relativeError << " %"
              << endl;
 
+        if (fabs(fx) < tolerance || relativeError < tolerance) {
+            converged = true;
+            break;
+        }
+        x0 = x1;
+        iteration++;
+    } while (iteration < maxIterations);
+    cout << "-----------------------------------------------------------------------------------------\n";
+    if (converged)
+        cout << "Root found: " << fixed << setprecision(6) << x1 << " after " << iteration + 1 << " iterations.\n";
+    else
+        cout << "Method did not converge within the maximum number of iterations.\n";
+
 
 
