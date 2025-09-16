@@ -1,4 +1,5 @@
-#include <iostream> 
-#include<cmath>
+#include <istream>
+#include <iomanip>
+#include <cmath>
+#include <vector>
 using namespace std;
-double f(double x)
