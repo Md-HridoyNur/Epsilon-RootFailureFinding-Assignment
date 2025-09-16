@@ -95,5 +95,7 @@ cout << "\nEnter initial guess (x0): ";
 cin >> x0;
 cout << "Enter tolerance (e.g., 0.0001): ";
 cin >> tolerance;
+cout << "Enter maximum number of interations: ";
+cin >> maxIterations;
 
 
