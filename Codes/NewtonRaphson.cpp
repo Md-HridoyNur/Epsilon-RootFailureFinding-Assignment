@@ -79,6 +79,8 @@ int main() {
     cout << "Enter degree of polynomial: ";
     cin >> degree;
 
+vector<double> coeffs(degree + 1);
+    
 
 
 
