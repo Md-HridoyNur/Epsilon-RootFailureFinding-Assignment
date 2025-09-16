@@ -41,4 +41,22 @@ void newtonRaphson(const vector<double>& coeffs, double x0, double tolerance, in
             return;
         }
 
-        
+        x1 = x0 - fx / dfx;
+
+        if (iteration == 0) {
+            relativeError = 100.0;
+        } else {
+            relativeError = fabs((x1 - x0) / x1) * 100;
+        }
+
+
+        cout << setw(4) << right << iteration + 1 << " | "
+             << setw(13) << fixed << setprecision(6) << x0 << " | "
+             << setw(14) << fx << " | "
+             << setw(14) << dfx << " | "
+             << setw(13) << x1 << " | "
+             << setw(13) << relativeError << " %"
+             << endl;
+
+
+
