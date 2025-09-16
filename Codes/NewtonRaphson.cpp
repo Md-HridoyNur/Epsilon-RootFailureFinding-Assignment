@@ -88,6 +88,9 @@ vector<double> coeffs(degree + 1);
         cin >> coeffs[degree - i];
     }
     
+doible x0, tolerance;
+int maxIterations;
+
 
 
 
