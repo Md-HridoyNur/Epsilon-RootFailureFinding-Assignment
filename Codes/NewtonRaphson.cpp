@@ -91,18 +91,3 @@ vector<double> coeffs(degree + 1);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
->>>>>>> 60fbf5c1db23937c5f4c32a507a022208ced7880
-
-
-
