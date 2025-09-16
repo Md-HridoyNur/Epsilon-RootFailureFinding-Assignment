@@ -22,6 +22,7 @@ double df(const vector<double>& coeffs, double x) {
     return result;
 }
 
+<<<<<<< HEAD
 void newtonRaphson(const vector<double>& coeffs, double x0, double tolerance, int maxIterations) {
     double x1, fx, dfx, relativeError;
     int iteration = 0;
@@ -72,6 +73,86 @@ void newtonRaphson(const vector<double>& coeffs, double x0, double tolerance, in
         cout << "Method did not converge within the maximum number of iterations.\n";
 
         samia
+=======
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+int main() {
+    int degree;
+    cout << "=== NEWTON RAPHSON METHOD (General Polynomial) ===\n\n";
+    
+    cout << "Enter degree of polynomial: ";
+    cin >> degree;
+
+vector<double> coeffs(degree + 1);
+    cout << "Enter coefficients one by one (highest degree first):\n";
+    for (int i=degree; i >= 0; i--) {
+        cout << "a" << i << ":";
+        cin >> coeffs[degree - i];
+    }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 60fbf5c1db23937c5f4c32a507a022208ced7880
 
 
 
