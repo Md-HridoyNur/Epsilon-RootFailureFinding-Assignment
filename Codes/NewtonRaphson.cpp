@@ -22,3 +22,5 @@ double df(const vector<double>& coeffs, double x) {
     return result;
 }
 
+ety
+
