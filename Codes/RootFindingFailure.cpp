@@ -4,4 +4,4 @@
 using namespace std;
 
 constexpr int MAXIT = 200;
-constexpr double TOL = 1e-10; sathi
+constexpr double TOL = 1e-10; samia
