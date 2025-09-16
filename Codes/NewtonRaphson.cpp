@@ -58,7 +58,7 @@ void newtonRaphson(const vector<double>& coeffs, double x0, double tolerance, in
              << setw(13) << relativeError << " %"
              << endl;
 
-        if (fabs(fx0) < tolerance || relativeError < tolerance) {
+        if (fabs(fx) < tolerance || relativeError < tolerance) {
             converged = true;
             break;
         }
