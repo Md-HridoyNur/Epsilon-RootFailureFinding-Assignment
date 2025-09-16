@@ -4,4 +4,4 @@
 using namespace std;
 
 constexpr int MAXIT = 200;
-constexpr double TOL = 1e-10;
+constexpr double TOL = 1e-10; nmnnnn
