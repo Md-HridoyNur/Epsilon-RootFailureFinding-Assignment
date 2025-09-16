@@ -22,7 +22,6 @@ double df(const vector<double>& coeffs, double x) {
     return result;
 }
 
-<<<<<<< HEAD
 void newtonRaphson(const vector<double>& coeffs, double x0, double tolerance, int maxIterations) {
     double x1, fx, dfx, relativeError;
     int iteration = 0;
