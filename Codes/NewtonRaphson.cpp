@@ -80,6 +80,11 @@ int main() {
     cin >> degree;
 
 vector<double> coeffs(degree + 1);
+    cout << "Enter coefficients one by one (highest degree first):\n";
+    for (int i=degree; i >= 0; i--) {
+        cout << "a" << i << ":";
+        cin >> coeffs[degree - i];
+    }
     
 
 
