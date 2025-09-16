@@ -33,5 +33,13 @@ void newtonRaphson(const vector<double>& coeffs, double x0, double tolerance, in
     cout << "Iter |       x0       |       f(x0)     |      f'(x0)     |       x1       | Relative Error\n";
     cout << "-----------------------------------------------------------------------------------------\n";
 
- 
+    do {
+        fx = f(coeffs, x0);
+        dfx = df(coeffs, x0);
 
+        if (fabs(dfx) < 1e-12) {
+            cout << "Error: Derivative became zero. Method cannot continue.\n";
+            return;
+        }
+
+       
