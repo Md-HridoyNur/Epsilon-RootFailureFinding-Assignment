@@ -88,14 +88,19 @@ vector<double> coeffs(degree + 1);
         cin >> coeffs[degree - i];
     }
     
-doible x0, tolerance;
-int maxIterations;
+    double x0, tolerance;
+    int maxIterations;
 
-cout << "\nEnter initial guess (x0): ";
-cin >> x0;
-cout << "Enter tolerance (e.g., 0.0001): ";
-cin >> tolerance;
-cout << "Enter maximum number of interations: ";
-cin >> maxIterations;
+    cout << "\nEnter initial guess (x0): ";
+    cin >> x0;
+    cout << "Enter tolerance (e.g., 0.0001): ";
+    cin >> tolerance;
+    cout << "Enter maximum number of interations: ";
+    cin >> maxIterations;
+
+    newtonRaphson(coeffs, x0, tolerance, maxIterations);
+
+    return 0;
+}
 
 
