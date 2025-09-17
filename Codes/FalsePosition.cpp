@@ -24,4 +24,19 @@ double maxrootestimate ( const vector<double>& coeffs){
     return sqrt ( discrim);
 }
 
-
+bool findinitialguesses (const vector<double>& coeffs,double & x1, double & x2,double step = 0.1 ){
+    double R = maxrootestimate ( coeffs );
+    double prevX = -R ;
+    double prevF = f ( coeffs ,prevX);
+    for (double x=-R+step){
+        double currF = f ( coeffs,x);
+        if ( prevF*currF<0){
+            x1 = prevX;
+            x2=x;
+            return true ;
+        }
+        prevX  = x;
+        prevF = currF;
+    }
+    return false;
+}
