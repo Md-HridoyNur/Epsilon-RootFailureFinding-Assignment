@@ -1,4 +1,4 @@
-#include <istream>
+#include <iostream>
 #include <iomanip>
 #include <cmath>
 #include <vector>
