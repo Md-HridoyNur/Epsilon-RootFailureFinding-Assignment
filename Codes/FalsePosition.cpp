@@ -48,8 +48,10 @@ void  falsePosition (const vector<double>& coeffs, double x1, double x2, double 
         cout<< "Error: f (x1) and f (x2) must have opposite singns.\n";
         return;
     }
+    double x0, fx0, prevx0, relativeError;
+    int iteration =0;
+    bool firstIteration = true;
 }
-
 
 
 
