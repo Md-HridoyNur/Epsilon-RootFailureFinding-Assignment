@@ -62,7 +62,11 @@ void  falsePosition (const vector<double>& coeffs, double x1, double x2, double 
 
        if (fabs(fx1) < tolerance) { x0 = x1; fx0 = fx1; break; }
        if (fabs(fx2) < tolerance) { x0 = x2; fx0 = fx2; break; }
-
+       
+       if (fabs(fx2 - fx1) < 1e-12) cout << "Warning: Denominator small, may cause precision issues.\n";
+       
+       x0 = (x1 * fx2 - x2 * fx1) / (fx2 - fx1);
+       x fx0 = f(coeffs, x0);
     }
 }
 
