@@ -55,7 +55,11 @@ void  falsePosition (const vector<double>& coeffs, double x1, double x2, double 
     cout << "-------------------------------------------------------------------------------\n";
     cout << "Iter |      x1      |      x2      |      x0      |     f(x0)    | Relative Error\n";
     cout << "-------------------------------------------------------------------------------\n";
-
+    
+    do {
+       fx1= f(coeffs, x1);
+       fx2= f(coeffs, x2);
+    }
 }
 
 
