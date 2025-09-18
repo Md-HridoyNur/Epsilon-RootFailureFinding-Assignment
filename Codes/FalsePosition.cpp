@@ -86,7 +86,19 @@ void  falsePosition (const vector<double>& coeffs, double x1, double x2, double 
         prev x0 = x0;
         iteration++;
      }
-    
+    while (iteration < maxIterations);
+
+    cout << "-------------------------------------------------------------------------------\n";
+    if (fabs(fx0) < tolerance) 
+    { 
+    cout << "✓ Convergence achieved!\n";
+        cout << "Root approximation: " << fixed << setprecision(6) << x0 << endl;
+        cout << "f(x) = " << scientific << setprecision(6) << fx0 << endl;
+    }
+    else {
+        
+    }
+    }
 }
 
 
