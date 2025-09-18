@@ -51,6 +51,11 @@ void  falsePosition (const vector<double>& coeffs, double x1, double x2, double 
     double x0, fx0, prevx0, relativeError;
     int iteration =0;
     bool firstIteration = true;
+    cout << "\nIteration Table:\n";
+    cout << "-------------------------------------------------------------------------------\n";
+    cout << "Iter |      x1      |      x2      |      x0      |     f(x0)    | Relative Error\n";
+    cout << "-------------------------------------------------------------------------------\n";
+
 }
 
 
