@@ -40,6 +40,12 @@ bool findinitialguesses (const vector<double>& coeffs,double & x1, double & x2,d
     }
     return false;
 }
+void falsePosition (const vector<double>& coeffs, double x1, double x2, double tolerance, int maxIterations){
+    double fx1 = f(coeffs, x1);
+    double fx2 = f(coeffs, x2);
+}
+
+
 
 
 
