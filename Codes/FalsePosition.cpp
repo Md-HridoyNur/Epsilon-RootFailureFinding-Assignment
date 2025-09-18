@@ -59,6 +59,10 @@ void  falsePosition (const vector<double>& coeffs, double x1, double x2, double 
     do {
        fx1= f(coeffs, x1);
        fx2= f(coeffs, x2);
+
+       if (fabs(fx1) < tolerance) { x0 = x1; fx0 = fx1; break; }
+       if (fabs(fx2) < tolerance) { x0 = x2; fx0 = fx2; break; }
+
     }
 }
 
