@@ -70,7 +70,13 @@ void  falsePosition (const vector<double>& coeffs, double x1, double x2, double 
 
        if (firstIteration) { relativeError =100.0; firstIteration = false; }
        else { relativeError = fabs ((x0 - prevx0) / x0) * 100; }
-
+       
+       cout << setw(4)  << iteration + 1 << " | "
+            << setw(12) << fixed << setprecision(6) << x1 << " | "
+            << setw(12) << x2 << " | "
+             << setw(12) << x0 << " | "
+             << setw(12) << fx0 << " | "
+             << setw(12) << relativeError << " %\n";
        
     }
 }
