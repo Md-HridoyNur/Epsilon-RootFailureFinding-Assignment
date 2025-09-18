@@ -40,9 +40,14 @@ bool findinitialguesses (const vector<double>& coeffs,double & x1, double & x2,d
     }
     return false;
 }
-void falsePosition (const vector<double>& coeffs, double x1, double x2, double tolerance, int maxIterations){
+void  falsePosition (const vector<double>& coeffs, double x1, double x2, double tolerance, int maxIterations){
     double fx1 = f(coeffs, x1);
     double fx2 = f(coeffs, x2);
+
+    if (fx1 * fx2 > 0){
+        cout<< "Error: f (x1) and f (x2) must have opposite singns.\n";
+        return;
+    }
 }
 
 
