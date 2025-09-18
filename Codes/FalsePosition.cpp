@@ -77,8 +77,16 @@ void  falsePosition (const vector<double>& coeffs, double x1, double x2, double 
              << setw(12) << x0 << " | "
              << setw(12) << fx0 << " | "
              << setw(12) << relativeError << " %\n";
-       
-    }
+
+        if (fabs(fx0) < tolerance) break;
+
+        if (fx1 * fx0 < 0) x2 = x0;
+        else x1 = x0;
+
+        prev x0 = x0;
+        iteration++;
+     }
+    
 }
 
 
