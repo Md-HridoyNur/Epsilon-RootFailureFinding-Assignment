@@ -40,6 +40,9 @@ for (int k = 1; k <= maxit; ++k) {
       << setw(12) << x << setw(14) << "derivative~0" << "\n";
    return;
  }
+double dx = fx / dfx;
+double x1 = x - dx;
+double relErr = (k==1)? 100.0 : fabs((x1 - x)/x1)*100;
 
 
 
