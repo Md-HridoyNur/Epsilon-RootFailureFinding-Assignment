@@ -73,10 +73,10 @@ for(int k=1; k<=maxit; ++k) {
    cout << setw(6) << k << setw(12) << x1 << setw(12) << x2
       << setw(12) << x0 << setw(12) << f0 << setw(14) << relErr << "\n";
 
-
-
-
-
+   if (fabs(f0)<tol || relErr<tol) {
+      cout << "Converged to x0 = " << x0 << " after " << k << " iterations, f(x0)= " << f0 << "\n";
+     return;
+  }
 
 
 
