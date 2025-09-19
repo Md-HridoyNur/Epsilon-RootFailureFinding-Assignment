@@ -34,3 +34,17 @@ void newton_method(double (*f)(double), double (*df)(double),
 double x = x0;
 for (int k = 1; k <= maxit; ++k) {
   double fx = f(x);
+  double dfx = df(x);
+  if (fabs(dfx) < 1e-14) {
+    cout << setw(6) << k << setw(12) << x << setw(12) << fx << setw(12) << 0
+      << setw(12) << x << setw(14) << "derivative~0" << "\n";
+   return;
+ }
+
+
+
+
+
+
+
+        
