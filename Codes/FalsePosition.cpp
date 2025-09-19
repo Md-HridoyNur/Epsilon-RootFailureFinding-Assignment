@@ -29,7 +29,7 @@ bool findinitialguesses (const vector<double>& coeffs,double & x1, double & x2,d
     double R = maxrootestimate ( coeffs );
     double prevX = -R ;
     double prevF = f ( coeffs ,prevX);
-    for (double x=-R+step){
+    for (double x= -R + step; x<= R; x+= step){
         double currF = f ( coeffs,x);
         if ( prevF*currF<0){
             x1 = prevX;
