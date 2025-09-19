@@ -84,7 +84,7 @@ void  falsePosition (const vector<double>& coeffs, double x1, double x2, double 
         if (fx1 * fx0 < 0) x2 = x0;
         else x1 = x0;
 
-        prev x0 = x0;
+        prevx0 = x0;
         iteration++;
      }
     while (iteration < maxIterations);
