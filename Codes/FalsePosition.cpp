@@ -103,6 +103,7 @@ void  falsePosition (const vector<double>& coeffs, double x1, double x2, double 
          }
     cout << "Iteration: " << iteration + 1 << endl;
     }
+    
     int main() {
     int degree;
     cout << "=== FALSE POSITION METHOD (General Polynomial) ===\n\n";
