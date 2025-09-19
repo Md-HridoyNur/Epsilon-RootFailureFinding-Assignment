@@ -64,9 +64,10 @@ if (f1*f2>=0) { cout << "Endpoints must have opposite signs.\n"; return; }
 cout << setw(6) << "Iter" << setw(12) << "x1" << setw(12) << "x2"
   << setw(12) << "x0" << setw(12) << "f(x0)" << setw(14) << "RelError(%)\n";
 
-
-
-
+double x0, f0, prevX0=0;
+for(int k=1; k<=maxit; ++k) {
+   x0 = x2 - f2*(x2 - x1)/(f2 - f1);
+   f0 = f(x0);
 
 
 
