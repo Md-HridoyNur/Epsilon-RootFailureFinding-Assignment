@@ -12,3 +12,10 @@ ouble df_cuberoot(double x) {
     double t = cbrt(x);
     return (1.0 / 3.0) / (t * t);
 }
+
+double f_repeat2(double x) { double t = x - 1.0; return t * t; }
+double df_repeat2(double x) { return 2.0 * (x - 1.0); }
+
+double f_x3(double x) { return x * x * x; }
+double df_x3(double x) { return 3.0 * x * x; }
+
