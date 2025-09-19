@@ -68,9 +68,19 @@ double x0, f0, prevX0=0;
 for(int k=1; k<=maxit; ++k) {
    x0 = x2 - f2*(x2 - x1)/(f2 - f1);
    f0 = f(x0);
+   double relErr = (k==1)? 100.0 : fabs((x0 - prevX0)/x0)*100;
+
+   cout << setw(6) << k << setw(12) << x1 << setw(12) << x2
+      << setw(12) << x0 << setw(12) << f0 << setw(14) << relErr << "\n";
 
 
 
+
+
+
+
+
+       
 
     
 
