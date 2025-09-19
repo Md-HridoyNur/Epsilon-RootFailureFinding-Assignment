@@ -25,3 +25,9 @@ double df_quad(double x) { return 2.0 * x; }
 int pow_n = 50;
 double f_pown(double x) { return pow(x, pow_n) - 1.0; }
 
+void newton_method(double (*f)(double), double (*df)(double),
+                  double x0, int maxit, double tol, const string& tag) { 
+      cout << "----- Newton-Raphson: " << tag << " | x0 = " << fixed << setprecision(6) << x0 << " -----\n";
+        cout << setw(6) << "Iter" << setw(12) << "x0" << setw(12) << "f(x0)" << setw(12) << "f'(x0)"
+          << setw(12) << "x1" << setw(14) << "RelError(%)\n";
+
