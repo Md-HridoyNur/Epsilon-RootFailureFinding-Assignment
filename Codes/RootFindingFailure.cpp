@@ -86,7 +86,7 @@ prevX0 = x0;
 cout << "Max iterations reached; last x0 = " << x0 << ", f(x0) = " << f0 << "\n";
 }
 
-oid false_position_illinois(double (*f)(double), double x1, double x2, int maxit, double tol, const string& tag) {
+void false_position_illinois(double (*f)(double), double x1, double x2, int maxit, double tol, const string& tag) {
 
 
 
