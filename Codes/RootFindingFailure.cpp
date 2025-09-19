@@ -31,3 +31,6 @@ void newton_method(double (*f)(double), double (*df)(double),
         cout << setw(6) << "Iter" << setw(12) << "x0" << setw(12) << "f(x0)" << setw(12) << "f'(x0)"
           << setw(12) << "x1" << setw(14) << "RelError(%)\n";
 
+double x = x0;
+for (int k = 1; k <= maxit; ++k) {
+  double fx = f(x);
