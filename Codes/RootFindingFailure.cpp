@@ -58,7 +58,8 @@ cout << setw(6) << k << setw(12) << x << setw(12) << fx << setw(12) << dfx
 
 void false_position(double (*f)(double), double x1, double x2, int maxit, double tol, const string& tag) {
 cout << "----- False Position: " << tag << " | bracket = [" << x1 << ", " << x2 << "] -----\n";
-
+double f1 = f(x1), f2 = f(x2);
+if (f1*f2>=0) { cout << "Endpoints must have opposite signs.\n"; return; }
 
 
 
