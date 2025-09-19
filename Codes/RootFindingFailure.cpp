@@ -61,8 +61,17 @@ cout << "----- False Position: " << tag << " | bracket = [" << x1 << ", " << x2 
 double f1 = f(x1), f2 = f(x2);
 if (f1*f2>=0) { cout << "Endpoints must have opposite signs.\n"; return; }
 
+cout << setw(6) << "Iter" << setw(12) << "x1" << setw(12) << "x2"
+  << setw(12) << "x0" << setw(12) << "f(x0)" << setw(14) << "RelError(%)\n";
 
 
+
+
+
+
+
+
+    
 
 
 
