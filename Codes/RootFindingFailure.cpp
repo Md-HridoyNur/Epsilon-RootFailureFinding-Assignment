@@ -78,6 +78,21 @@ for(int k=1; k<=maxit; ++k) {
      return;
   }
 
+if (f1*f0<0) { x2 = x0; f2 = f0; }
+ else { x1 = x0; f1 = f0; }
+
+prevX0 = x0;
+}
+
+
+
+
+
+
+
+
+
+
 
 
        
