@@ -44,6 +44,20 @@ double dx = fx / dfx;
 double x1 = x - dx;
 double relErr = (k==1)? 100.0 : fabs((x1 - x)/x1)*100;
 
+cout << setw(6) << k << setw(12) << x << setw(12) << fx << setw(12) << dfx
+  << setw(12) << x1 << setw(14) << relErr << "\n";
+
+  if (fabs(dx) < tol) {
+   cout << "Converged to x = " << x1 << " after " << k << " iterations, f(x)= " << f(x1) << "\n";
+    return;
+  }
+  x = x1;
+ }
+
+
+
+
+
 
 
 
