@@ -3,7 +3,6 @@
 #include <iomanip>
 using namespace std;
 
-
 constexpr int MAXIT = 200;
 constexpr double TOL = 1e-10;
 
@@ -13,4 +12,3 @@ ouble df_cuberoot(double x) {
     double t = cbrt(x);
     return (1.0 / 3.0) / (t * t);
 }
-
