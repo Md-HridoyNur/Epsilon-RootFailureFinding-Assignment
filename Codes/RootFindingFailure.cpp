@@ -19,3 +19,9 @@ double df_repeat2(double x) { return 2.0 * (x - 1.0); }
 double f_x3(double x) { return x * x * x; }
 double df_x3(double x) { return 3.0 * x * x; }
 
+double f_quad(double x) { return x*x - 2.0; }
+double df_quad(double x) { return 2.0 * x; }
+
+int pow_n = 50;
+double f_pown(double x) { return pow(x, pow_n) - 1.0; }
+
