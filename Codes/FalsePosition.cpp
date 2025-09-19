@@ -97,7 +97,7 @@ void  falsePosition (const vector<double>& coeffs, double x1, double x2, double 
         cout << "f(x) = " << scientific << setprecision(6) << fx0 << endl;
     }
     else {
-      out << "✗ Maximum iterations reached.\n";
+        cout << "✗ Maximum iterations reached.\n";
         cout << "Best approximation: " << fixed << setprecision(6) << x0 << endl;
         cout << "f(x) = " << scientific << setprecision(6) << fx0 << endl;
          }
