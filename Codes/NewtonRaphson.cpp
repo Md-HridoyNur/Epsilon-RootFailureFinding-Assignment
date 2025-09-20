@@ -104,5 +104,3 @@ vector<double> coeffs(degree + 1);
 
     return 0;
 }
-
-
