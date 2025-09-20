@@ -121,4 +121,31 @@ double x0, f0, prevX0=0;
 
         prevX0 = x0;
     }
-    
+    cout<<"Max iterations reached; last x0 = " << x0 << ", f(x0) = " << f0 << "\n";
+}
+
+int main() {
+    cout << "\nROOT-FINDING FAILURE DEMONSTRATIONS (C++) \n\n";
+
+    newton_method(f_cuberoot, df_cuberoot, 0.1, 20, 1e-12, "f(x)=cuberoot(x) -> divergent");
+    cout << "\n";
+    newton_method(f_repeat2, df_repeat2, 2.0, 40, 1e-12, "f(x)=(x-1)^2 -> repeated root");
+    cout << "\n";
+  newton_method(f_x3, df_x3, 0.0, 10, 1e-12, "f(x)=x^3 with x0=0 (derivative=0)");
+    cout << "\n";
+    newton_method(f_quad, df_quad, 1.0, 20, 1e-12, "f(x)=x^2-2 (good convergence)");
+
+    cout << "\n--------------------------------------------\n\n";
+
+    pow_n = 50;
+    false_position(f_pown, 0.0, 2.0, 200, 1e-12, "f(x)=x^50-1 slow");
+    cout << "\n";
+    false_position_illinois(f_pown, 0.0, 2.0, 200, 1e-12, "f(x)=x^50-1 Illinois");
+
+    cout << "\nSummary:\n";
+    cout << " - Newton diverges for cbrt(x) because x_{n+1}=-2x_n.\n";
+    cout << " - Newton slow for repeated roots.\n";
+    cout << " - False Position may move one endpoint slowly; Illinois improves convergence.\n";
+
+    return 0;
+  }
