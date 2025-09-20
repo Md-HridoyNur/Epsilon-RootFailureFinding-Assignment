@@ -103,23 +103,7 @@ void  falsePosition (const vector<double>& coeffs, double x1, double x2, double 
          }
     cout << "Iteration: " << iteration + 1 << endl;
     }
- int main(){
-    int degree;
-    cout << "=== FALSE POSITION METHOD- ( General Polynyomal ) ===\n\n";
-
-    cout << " enter degree of polynomial :";
-    cin >> degree;
-
-    vector< double > coeffs ( degree + 1);
-    cout <<" enter coefficients one by one ( highest degree first ):\n";
-    for ( int i=0;i<=degree;i++){
-        cout << "a"<< (degree-i)<<"=";
-        cin >> coeffs [i];
-    }
-
-    double tolerance; 
- }
-
+ 
 
 
 
