@@ -4,6 +4,8 @@
 #include <vector>
 using namespace std;
 
+
+//Evaluate polynomial at x
 double f(const vector<double>& coeffs, double x) {
     int n = coeffs.size() - 1;
     double result = 0.0;
@@ -13,6 +15,7 @@ double f(const vector<double>& coeffs, double x) {
     return result;
 }
 
+//Evaluate derivative of polynomial at x
 double df(const vector<double>& coeffs, double x) {
     int n = coeffs.size() - 1;
     double result = 0.0;
@@ -79,7 +82,8 @@ void newtonRaphson(const vector<double>& coeffs, double x0, double tolerance, in
 int main() {
     int degree;
     cout << "=== NEWTON RAPHSON METHOD (General Polynomial) ===\n\n";
-        
+
+    // Get polynomial from user
     cout << "Enter degree of polynomial: ";
     cin >> degree;
 
@@ -90,6 +94,7 @@ vector<double> coeffs(degree + 1);
         cin >> coeffs[degree - i];
     }
     
+    // User input for Newton-Raphson 
     double x0, tolerance;
     int maxIterations;
 
@@ -100,6 +105,7 @@ vector<double> coeffs(degree + 1);
     cout << "Enter maximum number of interations: ";
     cin >> maxIterations;
 
+// Run method
     newtonRaphson(coeffs, x0, tolerance, maxIterations);
 
     return 0;
