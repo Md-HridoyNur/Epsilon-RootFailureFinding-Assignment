@@ -167,6 +167,3 @@ void  falsePosition (const vector<double>& coeffs, double x1, double x2, double 
 
 
 
-int main(){
-    int degree;
-}
