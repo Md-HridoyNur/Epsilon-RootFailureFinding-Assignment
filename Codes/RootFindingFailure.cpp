@@ -112,12 +112,14 @@ double x0, f0, prevX0=0;
         if(f1*f0<0) {
             x2 = x0; f2 = f0;
             if(lastUpdated == 1) f1 *= 0.5;
-            lastUpdated = 1;
+            lastUpdated = 2;
         } else {
             x1 = x0; f1 = f0;
-            if(lastUpdated == 2) f2 *= 0.5;
-            lastUpdated = 2;
+            if(lastUpdated == 1) f2 *= 0.5;
+            lastUpdated = 1;
         }
+
+        prevX0 = x0;
     }
 
 
