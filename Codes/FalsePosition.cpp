@@ -124,8 +124,30 @@ void  falsePosition (const vector<double>& coeffs, double x1, double x2, double 
     cout << "Enter maximum number of iterations: ";
     cin >> maxIterations;
 
-    
- }
+      double x1, x2;
+    char choice;
+    cout << "Do you want to use auto-generated initial guesses? (y/n): ";
+    cin >> choice;
+
+    if (choice == 'y' || choice == 'Y') {
+        if (!findInitialGuesses(coeffs, x1, x2)) {
+            cout << "Error: Could not find initial guesses automatically. Try manual input.\n";
+            return 1;
+        }
+        cout << "Automatic initial guesses found: x1 = " << x1 << ", x2 = " << x2 << endl;
+    } else {
+        cout << "Enter first initial guess (x1): ";
+        cin >> x1;
+        cout << "Enter second initial guess (x2): ";
+        cin >> x2;
+    }
+
+    falsePosition(coeffs, x1, x2, tolerance, maxIterations);
+
+    return 0;
+}
+
+ 
 
 
 
