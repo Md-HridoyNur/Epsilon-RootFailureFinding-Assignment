@@ -4,6 +4,7 @@
 #include<vector>
 
 using namespace std;
+// Evaluate polynomial at x
 
 double f(const vector<double>& coeffs,double x){
     int n = coeffs.size()-1;
@@ -13,7 +14,7 @@ double f(const vector<double>& coeffs,double x){
     }
     return result ;
 }
-
+// Estimate root range using the formula you provided
 double maxrootestimate ( const vector<double>& coeffs){
     int n = coeffs.size()-1;
     if (n<2) return 1.0;
@@ -24,7 +25,7 @@ double maxrootestimate ( const vector<double>& coeffs){
     if ( discrim <0 ) discrim = 0;
     return sqrt ( discrim);
 }
-
+// Automatically find a pair of x1, x2 with sign change
 bool findinitialguesses (const vector<double>& coeffs,double & x1, double & x2,double step = 0.1 ){
     double R = maxrootestimate ( coeffs );
     double prevX = -R ;
@@ -41,6 +42,7 @@ bool findinitialguesses (const vector<double>& coeffs,double & x1, double & x2,d
     }
     return false;
 }
+// False Position method
 void  falsePosition (const vector<double>& coeffs, double x1, double x2, double tolerance, int maxIterations){
     double fx1 = f(coeffs, x1);
     double fx2 = f(coeffs, x2);
