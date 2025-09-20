@@ -22,6 +22,7 @@ double df(const vector<double>& coeffs, double x) {
     return result;
 }
 
+// Newton-Raphson method
 void newtonRaphson(const vector<double>& coeffs, double x0, double tolerance, int maxIterations) {
     double x1, fx, dfx, relativeError;
     int iteration = 0;
@@ -41,15 +42,17 @@ void newtonRaphson(const vector<double>& coeffs, double x0, double tolerance, in
             return;
         }
 
+      // Newton Raphson formula
         x1 = x0 - fx / dfx;
 
+        // Relative error
         if (iteration == 0) {
             relativeError = 100.0;
         } else {
             relativeError = fabs((x1 - x0) / x1) * 100;
         }
 
-
+        // Print row
         cout << setw(4) << right << iteration + 1 << " | "
              << setw(13) << fixed << setprecision(6) << x0 << " | "
              << setw(14) << fx << " | "
@@ -76,7 +79,7 @@ void newtonRaphson(const vector<double>& coeffs, double x0, double tolerance, in
 int main() {
     int degree;
     cout << "=== NEWTON RAPHSON METHOD (General Polynomial) ===\n\n";
-    
+        
     cout << "Enter degree of polynomial: ";
     cin >> degree;
 
