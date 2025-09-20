@@ -117,7 +117,7 @@ void  falsePosition (const vector<double>& coeffs, double x1, double x2, double 
         cin >> coeffs [i];
     }
 
-    double tolerance;
+    double tolerance; 
  }
 
 
