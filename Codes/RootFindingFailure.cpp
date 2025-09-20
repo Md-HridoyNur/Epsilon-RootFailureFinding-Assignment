@@ -121,15 +121,4 @@ double x0, f0, prevX0=0;
 
         prevX0 = x0;
     }
-
-
-
-
-       
-
     
-
-
-
-
-        
