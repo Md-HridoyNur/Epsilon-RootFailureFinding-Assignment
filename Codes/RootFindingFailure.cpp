@@ -80,10 +80,16 @@ for(int k=1; k<=maxit; ++k) {
 
 if (f1*f0<0) { x2 = x0; f2 = f0; }
  else { x1 = x0; f1 = f0; }
+
   prevX0 = x0;
   }
   cout << "Max iterations reached; last x0 = " << x0 << ", f(x0) = " << f0 << "\n";
 }
+
+void false_position_illinois(double (*f)(double), double x1, double x2, int maxit, double tol, const string& tag) {
+cout << "----- False Position (Illinois): " << tag << " | bracket = [" << x1 << ", " << x2 << "] -----\n";
+double f1 = f(x1), f2 = f(x2);
+if (f1*f2>=0) { cout << "Endpoints must have opposite signs.\n"; return; }
 
 
 
