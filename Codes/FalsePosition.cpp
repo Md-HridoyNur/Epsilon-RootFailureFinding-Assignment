@@ -130,7 +130,7 @@ void  falsePosition (const vector<double>& coeffs, double x1, double x2, double 
     cin >> choice;
 
     if (choice == 'y' || choice == 'Y') {
-        if (!findInitialGuesses(coeffs, x1, x2)) {
+        if (!findinitialguesses(coeffs,x1,x2)) {
             cout << "Error: Could not find initial guesses automatically. Try manual input.\n";
             return 1;
         }
