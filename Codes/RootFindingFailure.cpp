@@ -115,7 +115,7 @@ cout << setw(6) << "Iter" << setw(12) << "x1" << setw(12) << "x2"
   << setw(12) << "x0" << setw(12) << "f(x0)" << setw(14) << "RelError(%)\n";
 
 double x0, f0, prevX0=0;
-  int lastUpdated = 0;
+  int lastUpdated = 0; // track which endpoint was updated last
     for(int k=1; k<=maxit; ++k) {
         x0 = x2 - f2*(x2 - x1)/(f2 - f1);
         f0 = f(x0);
@@ -123,12 +123,12 @@ double x0, f0, prevX0=0;
 
               cout << setw(6) << k << setw(12) << x1 << setw(12) << x2
              << setw(12) << x0 << setw(12) << f0 << setw(14) << relErr << "\n";
-
+        // Convergence check
         if (fabs(f0)<tol || relErr<tol) {
             cout << "Converged to x0 = " << x0 << " after " << k << " iterations, f(x0)= " << f0 << "\n";
             return;     
         }
-
+ // Illinois modification: reduce the stagnant endpoint’s function value
         if(f1*f0<0) {
             x2 = x0; f2 = f0;
             if(lastUpdated == 1) f1 *= 0.5;
@@ -143,10 +143,10 @@ double x0, f0, prevX0=0;
     }
     cout<<"Max iterations reached; last x0 = " << x0 << ", f(x0) = " << f0 << "\n";
 }
-
+// ---------- Main Driver ----------
 int main() {
     cout << "\nROOT-FINDING FAILURE DEMONSTRATIONS (C++) \n\n";
-
+    // Demonstrations with Newton's method
     newton_method(f_cuberoot, df_cuberoot, 0.1, 20, 1e-12, "f(x)=cuberoot(x) -> divergent");
     cout << "\n";
     newton_method(f_repeat2, df_repeat2, 2.0, 40, 1e-12, "f(x)=(x-1)^2 -> repeated root");
@@ -156,12 +156,12 @@ int main() {
     newton_method(f_quad, df_quad, 1.0, 20, 1e-12, "f(x)=x^2-2 (good convergence)");
 
     cout << "\n--------------------------------------------\n\n";
-
+ // Demonstrations with False Position and Illinois methods
     pow_n = 50;
     false_position(f_pown, 0.0, 2.0, 200, 1e-12, "f(x)=x^50-1 slow");
     cout << "\n";
     false_position_illinois(f_pown, 0.0, 2.0, 200, 1e-12, "f(x)=x^50-1 Illinois");
-
+   // Summary
     cout << "\nSummary:\n";
     cout << " - Newton diverges for cbrt(x) because x_{n+1}=-2x_n.\n";
     cout << " - Newton slow for repeated roots.\n";
