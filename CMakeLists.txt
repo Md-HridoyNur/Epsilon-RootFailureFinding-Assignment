@@ -1,4 +1,5 @@
 cmake_minimum_required(VERSION 3.10)
-project(NewtonRaphsonMethod)
+project(Epsilon-RootFailureFinding)
 
-add_executable(Codes/main RootFindingFailure.cpp)
+add_executable(main RootFindingFailure.cpp)
+set_target_properties(main PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/Codes)
